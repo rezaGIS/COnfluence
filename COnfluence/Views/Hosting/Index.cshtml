@@ -1,0 +1,328 @@
+﻿
+@{
+    ViewBag.Title = "Hosting";
+    Layout = "~/Views/Shared/_LayoutOIT.cshtml";
+}
+<style>
+    .smooshed {
+        background: url("Content/images/MaroonLake.jpg")no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+
+
+<div id="divCats" class="container marketing">
+    <div class="sections">
+        <div><h1 id="PSheader" style="text-align:center; color:#5c666f;font-size:50px;">Hosting Services</h1></div>
+        <div class="row">
+            <div class="col-md-3">
+                <h2>Applications</h2>
+                <p>Includes GIS, non-GIS websites, or services, using applicable API libraries, languages, and platforms.  GCDP can provide a platform to help save costs when deciding to spin up an application created by a State Agency or a vendor for a State Agency.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#featurettes1" data-toggle="collapse" aria-expanded="true" data-target="#collapseOne">Technology used</a></li>
+                    <li class="list-group-item"><a href="#featurettes1" data-toggle="collapse" aria-expanded="true" data-target="#collapseTwo">Types of applications hosted</a></li>
+                    <li class="list-group-item"><a href="@Url.Action("Index", "Applications")#appsFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#">Applications hosted by GCDP</a></li>
+                    <li class="list-group-item"><a href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">Make a Request</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>Geospatial Services</h2>
+                <p>Geospatial services hosting is GCDP providing a platform for State Agencies to allow for conveniant sharing of data via Map, Feature, Geocoding and Geoprocessing services using GCDP's servers.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#geoFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#geoCollapseOne">Map Services Hosting</a></li>
+                    <li class="list-group-item"><a href="#geoFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#geoCollapseTwo">Feature Services hosting</a></li>
+                    <li class="list-group-item"><a href="#geoFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#geoCollapseThree">Geoprocessing Services hosting</a></li>
+                    <li class="list-group-item"><a href="#geoFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#geoCollapseFour">Geocoding Services hosting</a></li>
+                    <li class="list-group-item"><a href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">Make a Request</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>Database Hosting</h2>
+                <p>Database hosting allows for users to store data on GCDP's SQL servers for ease of access and sharing of data.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#dbFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#dbCollapseOne">Database technology used</a></li>
+                    <li class="list-group-item"><a href="#dbFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#dbCollapseTwo">Database support / maintenance</a></li>
+                    <li class="list-group-item"><a href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">Make a Request</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <h2>License Hosting</h2>
+                <p>Includes software license pooling for organization uses.</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#licenseFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#licenseCollapseOne">GIS License Pooling</a></li>
+                    <li class="list-group-item"><a href="#licenseFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#licenseCollapseTwo">GIS License Server Hosting</a></li>
+                    <li class="list-group-item"><a href="#licenseFeaturette" data-toggle="collapse" aria-expanded="true" data-target="#licenseCollapseThree">GCDP License Purchase Agreement</a></li>
+                    <li class="list-group-item"><a href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">Make a Request</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+    <!-- Section Headers and descriptions-->
+    <!-- START THE FEATURETTES -->
+    <hr class="featurette-divider">
+    <h1 class="featurette-heading" style="text-align:center">How We Can Assist State Agencies</h1>
+    <div class="sections">
+        <div id="featurettes1" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Applications. <span class="text-muted">What you need to know.</span></h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            APPLICATION HOSTING
+                            <a href="" title="Request Data" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">
+                                <span class="loglyphs glyphicon glyphicon-comment" aria-hidden="true" style="float:right; padding-right:5px;" title="Make a Request"> </span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    Hosting technology used
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">HTTPS <text style="padding-left: 10px;font-style:italic;">--Applications hosted using SHA-2 SSL certificates. <a href="">Click here</a> to view applications hosted by GCDP.</text></li>
+                                    <li class="list-group-item">FTP</li>
+                                    <li class="list-group-item">IIS</li>
+                                    <li class="list-group-item">MSSQL Server 2012</li>
+                                    <li class="list-group-item">Microsoft Windows Server 2012</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Types of applications hosted
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">ESRI GIS Applications <text style="padding-left: 10px;font-style:italic;"> -- GCDP has the ability to host applications utilizing ArcGIS for Server on GCDP's infrastructure. </text></li>
+                                    <li class="list-group-item">Open Source GIS Applications <text style="padding-left: 10px;font-style:italic;"> -- GCDP has the ability to host applications utilizing non-ESRI products.</text></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    View applications hosted by GCDP
+                                </a>
+                            </h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="geoFeaturette" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Geospatial Services Hosting. <span class="text-muted">What you need to know.</span></h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            SERVICES HOSTING
+                            <a href="" title="Request Data" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">
+                                <span class="loglyphs glyphicon glyphicon-comment" aria-hidden="true" style="float:right; padding-right:5px;" title="Make a Request"> </span>
+
+                            </a>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="geoHeadingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="geoCollapseOne" data-target="#geoCollapseOne">
+                                    What is map services hosting?
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="geoCollapseOne" class="accordion-body collapse" role="tabpanel" aria-labelledby="geoHeadingOne">
+                            <div class="list-group">
+                                <p style="padding-left: 10px;">Map services allows for users and applications to easily consume a data source utilizing its rest end points, generally map services should be static data. </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="geoHeadingTwo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="geoCollapseTwo" data-target="#geoCollapseTwo">
+                                    What is feature services hosting?
+                                </a>
+                            </h4>
+                        </div>
+
+                        <div id="geoCollapseTwo" class="accordion-body collapse" role="tabpanel" aria-labelledby="geoHeadingTwo">
+                            <div class="list-group">
+                                <p style="padding-left: 10px;">Feature services allow for user data entry and real time updates on applications consuming this service.  Data is hosted using Microsoft SQL server.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="geoHeadingThree">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="geoCollapseThree" data-target="#geoCollapseThree">
+                                    What is geoprocessing services hosting?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="geoCollapseThree" class="accordion-body collapse" role="tabpanel" aria-labelledby="geoHeadingThree">
+                            <div class="list-group">
+                                <p style="padding-left: 10px;">GCDP can host your ESRI tools online to allow for applications to process data utilitizing GCDP's server capabilities.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="geoHeadingFour">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" aria-expanded="true" aria-controls="geoCollapseFour" data-target="#geoCollapseFour">
+                                    What is geocoding services hosting?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="geoCollapseFour" class="accordion-body collapse" role="tabpanel" aria-labelledby="geoHeadingFour">
+                            <div class="list-group">
+                                <p style="padding-left: 10px;">GCDP can host your Address Locators and post them as a service for discovery to your selected group.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="dbFeaturette" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Database Hosting. <span class="text-muted">What you need to know.</span></h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            DATABASE HOSTING
+                            <a href="" title="Request Data" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom">
+                                <span class="loglyphs glyphicon glyphicon-comment" aria-hidden="true" style="float:right; padding-right:5px;" title="Make a Request"> </span>
+
+                            </a>
+
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="dbHeadingOne">
+                            <h4 class="panel-title">
+                                <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#dbCollapseOne" aria-expanded="false" aria-controls="dbCollapseOne">
+                                    Database hosting technology used
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="dbCollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dbHeadingOne">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">MSSQL Server 2012</li>
+                                    <li class="list-group-item">ArcGIS SDE</li>
+                                    <li class="list-group-item"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="dbHeadingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#dbCollapseTwo" aria-expanded="false" aria-controls="dbCollapseTwo">
+                                    Database support / maintenance
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="dbCollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="dbHeadingTwo">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">Database Support <text style="padding-left: 10px;font-style:italic;"> -- GCDP has knowledge and expertise to assist in any troubleshooting of issues from databases hosted on GCDP's infrastructure. </text></li>
+                                    <li class="list-group-item">Maintenance <text style="padding-left: 10px;font-style:italic;"> -- GCDP will provide support in the maintence and any updates to data hosted on GCDP's infrastructure.</text></li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="licenseFeaturette" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">License Hosting. <span class="text-muted">What you need to know.</span></h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            LICENSE HOSTING
+                            <span class="loglyphs glyphicon glyphicon-comment" aria-hidden="true" style="float:right; padding-right:5px;" title="Make a Request"> </span>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="licenseHeadingOne">
+                            <h4 class="panel-title">
+                                <a role="button" class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#licenseCollapseOne" aria-expanded="false" aria-controls="licenseCollapseOne">
+                                    GIS License Pooling
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="licenseCollapseOne" class="panel-collapse collapse" role="tabpanel" aria-labelledby="licenseHeadingOne">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">ESRI License Pooling <text style="padding-left: 10px;font-style:italic;"> -- GCDP has the ability to host your agency's ArcGIS licenses on GCDP's license manager.  Licenses will need to be purchased by Agency. </text></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="licenseHeadingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#licenseCollapseTwo" aria-expanded="false" aria-controls="licenseCollapseTwo">
+                                    GIS License Server Hosting
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="licenseCollapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="licenseHeadingTwo">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">ESRI License Mananager <text style="padding-left: 10px;font-style:italic;"> -- GCDP has the ability to host your agency's ArcGIS license manager for convenience of use, and for cost saving tactics.  Licenses will need to be purchased by Agency. </text></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="licenseHeadingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#licenseCollapseThree" aria-expanded="false" aria-controls="licenseCollapseThree">
+                                    GCDP License Purchase Agreement
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="licenseCollapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="licenseHeadingThree">
+                            <div class="list-group">
+                                <ul class="list-group">
+                                    <li class="list-group-item">GCDP License Purchase Agreement <text style="padding-left: 10px;font-style:italic;"> -- GCDP has a set standard of purchasing prices from companies like ESRI, please <a href="" data-toggle="modal" data-target="#requestModal">contact us</a> for additional information. </text></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

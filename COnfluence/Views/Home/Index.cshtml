@@ -1,0 +1,77 @@
+﻿@{
+    ViewBag.Title = "Home";
+
+}
+        <!-- Added for GIS Summit 2017 -->
+        <div class="gis-summit">
+            <div class="row container-fluid" style="margin-top:60px;">
+                <h1 style="text-align:center;"> <b>GIS Summit 2017 Replay</b></h1>
+                <p class="text-fluid" style="text-align:center; margin-top:10px; margin-bottom:10px;font-size:16px;"><b>3rd Annual State GIS Data Coordination Summit</b></p>
+                <p class="text-fluid" style="text-align:center; margin-top:10px; margin-bottom:10px;font-size:16px;">Now available on YouTube! </p>
+                <div class="text-center"><a href="http://www.youtube.com/watch?v=O7iCGws5EY4&t=2m37s" class="btn btn-primary oit-green" role="button" target="_blank">Watch Now</a></div>
+            </div>
+        </div>
+        <!--End of GIS Summit addition-->
+        <div class="row container-fluid" style="margin-top:20px; ">
+            <!--Top Margin changed from 60px to 20px for Summit -->
+            <h1 style="text-align:center;">Our Mission</h1>
+            <p class="text-fluid" style="text-align:center;margin-top:10px; margin-bottom:10px;font-size:16px;"><i>Empower data driven decision-making for the State of Colorado and its residents through improved sharing and availability of geographic information resulting from collaborative partnerships with all levels of government and the public</i></p>
+            <br />
+            <div class="col-md-3 text-center">
+                <div class="thumbnail thumbnail-oit">
+                    <!-- Here is where we get fancy-->
+                    <h3>Data Services</h3>
+                    <div class="caption">
+                        <p class="">
+                            Data products and services includes all manner of data acquisition, cleansing, standardization, representation and analysis
+                            <br /><br />
+                        </p>
+                        <div class="text-center"><a href="@Url.Action("Index", "DataServices")" class="btn btn-primary oit-green" role="button"> See more</a></div>
+                    </div>
+                    <img class="img-circle" src="~/Content/images/DBlogo.png" alt="Generic placeholder image" width="140" height="140">
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="thumbnail thumbnail-oit">
+                    <h3>Hosting Services</h3>
+                    <div class="caption">
+                        <p class="">
+                            Hosting services includes REST services, WMS, GIS License services, application hosting and hosting support. Hosting can be secured or public
+                            <br /><br />
+                        </p>
+                        <div class="text-center"><a href="@Url.Action("Index", "Hosting")" class="btn btn-primary oit-green" role="button"> See more</a></div>
+                    </div>
+                    <img class="img-circle" src="~/Content/images/cloudUpload.png" alt="Generic placeholder image" width="140" height="140">
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="thumbnail thumbnail-oit">
+                    <h3>Application Services</h3>
+                    <div class="caption">
+                        <p class="">
+                            Application services provides custom application development, management, and support through skillful design, technical solutions and diverse platforms
+                            <br /><br />
+                        </p>
+                        <div class="text-center"><a href="@Url.Action("Index", "Applications")" class="btn btn-primary oit-green" role="button"> See more</a></div>
+                    </div>
+                    <img class="img-circle" src="~/Content/images/grey_new_seo-18-512.png" alt="Generic placeholder image" width="140" height="140">
+                    <br />
+                </div>
+            </div>
+            <div class="col-md-3 text-center">
+                <div class="thumbnail thumbnail-oit">
+                    <h3>Business Services</h3>
+                    <div class="caption">
+                        <p class="">
+                            Business services integrates professional experience with project solutions through best practices, consultations, training and technical assessments
+                            <br /><br />
+                        </p>
+                        <div class="text-center"><a href="@Url.Action("Index", "Business")" class="btn btn-primary oit-green" role="button"> See more</a></div>
+                    </div>
+                    <img class="img-circle" src="~/Content/images/agreement-512.png" alt="Generic placeholder image" width="140" height="140">
+                    <br />
+                </div>
+            </div>
+        </div>

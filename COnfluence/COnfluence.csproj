@@ -1,0 +1,325 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{8FCB065B-43F2-4386-BFF7-1DA8754FA065}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>COnfluence</RootNamespace>
+    <AssemblyName>COnfluence</AssemblyName>
+    <TargetFrameworkVersion>v4.5.1</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System.Web.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.3\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Deployment">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Webpages.Razor">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Webpages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Helpers">
+      <HintPath>..\packages\Microsoft.AspNet.Webpages.3.2.3\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure">
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc">
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.3\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\confluence.css" />
+    <Content Include="Content\images\04-512.png" />
+    <Content Include="Content\images\agreement-512.png" />
+    <Content Include="Content\images\bannerLogo.png" />
+    <Content Include="Content\images\bb_portal.png" />
+    <Content Include="Content\images\Cart-Free-Download-PNG.png" />
+    <Content Include="Content\images\CIM.jpg" />
+    <Content Include="Content\images\clde_js.jpg" />
+    <Content Include="Content\images\clde_js.png" />
+    <Content Include="Content\images\cloudUpload.png" />
+    <Content Include="Content\images\co_oit_gis_cmyk.png" />
+    <Content Include="Content\images\DBlogo.png" />
+    <Content Include="Content\images\download.png" />
+    <Content Include="Content\images\favicon.png" />
+    <Content Include="Content\images\fieldCol02.jpg" />
+    <Content Include="Content\images\fieldCol03.jpg" />
+    <Content Include="Content\images\fieldCollection\a17.png" />
+    <Content Include="Content\images\fieldCollection\CoalPit.jpg" />
+    <Content Include="Content\images\fieldCollection\CoalPitThumb%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\CoalPitThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\Dock%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\Dock.jpg" />
+    <Content Include="Content\images\fieldCollection\DockThumb%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\DockThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\DockView%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\DockView.jpg" />
+    <Content Include="Content\images\fieldCollection\DockViewThumb%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\DockViewThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\Gazeebo%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\Gazeebo.jpg" />
+    <Content Include="Content\images\fieldCollection\GazeeboThumb%281%29.jpg" />
+    <Content Include="Content\images\fieldCollection\GazeeboThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\Jon.jpg" />
+    <Content Include="Content\images\fieldCollection\JonThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\LittleCreek.jpg" />
+    <Content Include="Content\images\fieldCollection\LittleCreekThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\loading.gif" />
+    <Content Include="Content\images\fieldCollection\PicnicTables.jpg" />
+    <Content Include="Content\images\fieldCollection\PicnicTablesThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\ShadyRiver.jpg" />
+    <Content Include="Content\images\fieldCollection\ShadyRiverThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\SittingArea.jpg" />
+    <Content Include="Content\images\fieldCollection\SittingAreaThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\t01.png" />
+    <Content Include="Content\images\fieldCollection\TrailMap.jpg" />
+    <Content Include="Content\images\fieldCollection\TrailMapThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\TrailWithBigTree.jpg" />
+    <Content Include="Content\images\fieldCollection\TrailWithBigTreeThumb.jpg" />
+    <Content Include="Content\images\fieldCollection\WindyNJon.jpg" />
+    <Content Include="Content\images\fieldCollection\WindyNJonThumb.jpg" />
+    <Content Include="Content\images\fieldThumb.jpg" />
+    <Content Include="Content\images\GISSummit29.jpg" />
+    <Content Include="Content\images\GIS_Summit21.jpg" />
+    <Content Include="Content\images\GIS_Summit23.jpg" />
+    <Content Include="Content\images\glyphicons-503-map.png" />
+    <Content Include="Content\images\grey_new_seo-18-512.png" />
+    <Content Include="Content\images\imageryIMG.jpg" />
+    <Content Include="Content\images\IMGL2681.jpg" />
+    <Content Include="Content\images\js.png" />
+    <Content Include="Content\images\logoGCDP.png" />
+    <Content Include="Content\images\logoGCDP2.png" />
+    <Content Include="Content\images\logo_orange_smaller.jpg" />
+    <Content Include="Content\images\logo_orange_smaller.png" />
+    <Content Include="Content\images\MaroonBells.png" />
+    <Content Include="Content\images\MaroonLake.png" />
+    <Content Include="Content\images\mountainScape.jpg" />
+    <Content Include="Content\images\mountCo.jpg" />
+    <Content Include="Content\images\no-image-icon-md.png" />
+    <Content Include="Content\images\OIT_Logo.png" />
+    <Content Include="Content\images\parcelMap.jpg" />
+    <Content Include="Content\images\quartCall.jpg" />
+    <Content Include="Content\images\squirrel.jpg" />
+    <Content Include="Content\images\storyMapCRRO.jpg" />
+    <Content Include="Content\images\summit2016\a17.png" />
+    <Content Include="Content\images\summit2016\Group1.jpg" />
+    <Content Include="Content\images\summit2016\Group1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\Group2.jpg" />
+    <Content Include="Content\images\summit2016\Group2Thumb.jpg" />
+    <Content Include="Content\images\summit2016\Group3.jpg" />
+    <Content Include="Content\images\summit2016\Group3Thumb.jpg" />
+    <Content Include="Content\images\summit2016\HappyCoffee.jpg" />
+    <Content Include="Content\images\summit2016\HappyCoffeeThumb.jpg" />
+    <Content Include="Content\images\summit2016\Jim1.jpg" />
+    <Content Include="Content\images\summit2016\Jim1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\JonGroup1.jpg" />
+    <Content Include="Content\images\summit2016\JonGroup1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\JonPresenting.jpg" />
+    <Content Include="Content\images\summit2016\JonPresentingThumb.jpg" />
+    <Content Include="Content\images\summit2016\KassBrentTony.jpg" />
+    <Content Include="Content\images\summit2016\KassBrentTonyThumb.jpg" />
+    <Content Include="Content\images\summit2016\loading.gif" />
+    <Content Include="Content\images\summit2016\PeopleWorking1.jpg" />
+    <Content Include="Content\images\summit2016\PeopleWorking1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\PeopleWorking2.jpg" />
+    <Content Include="Content\images\summit2016\PeopleWorking2Thumb%281%29.jpg" />
+    <Content Include="Content\images\summit2016\PeopleWorking2Thumb.jpg" />
+    <Content Include="Content\images\summit2016\t01%281%29.png" />
+    <Content Include="Content\images\summit2016\t01.png" />
+    <Content Include="Content\images\summit2016\Tudor1.jpg" />
+    <Content Include="Content\images\summit2016\Tudor1Thumb%281%29.jpg" />
+    <Content Include="Content\images\summit2016\Tudor1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\Windy1.jpg" />
+    <Content Include="Content\images\summit2016\Windy1Thumb%281%29.jpg" />
+    <Content Include="Content\images\summit2016\Windy1Thumb.jpg" />
+    <Content Include="Content\images\summit2016\WindyGroup1.jpg" />
+    <Content Include="Content\images\summit2016\WindyGroup1Thumb.jpg" />
+    <Content Include="Content\images\team\brentProf.jpg" />
+    <Content Include="Content\images\team\brentProf.png" />
+    <Content Include="Content\images\team\fletchProf.jpg" />
+    <Content Include="Content\images\team\jimProf.jpg" />
+    <Content Include="Content\images\team\jonProf.jpg" />
+    <Content Include="Content\images\team\kassProf.jpg" />
+    <Content Include="Content\images\team\rickProf.jpg" />
+    <Content Include="Content\images\team\tonyProf.jpg" />
+    <Content Include="Content\images\team\TudorProf.jpg" />
+    <Content Include="Content\images\team\windyProf.jpg" />
+    <Content Include="Content\images\thumbnailimageimg.jpg" />
+    <Content Include="Content\images\westSumm.jpg" />
+    <Content Include="Content\modals.css" />
+    <Content Include="Content\Site.css" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <Content Include="Content\images\pdfs\Data_Collection_App_Slides.pdf" />
+    <Content Include="Content\images\pdfs\GIS_summit_2016.pdf" />
+    <Content Include="Content\images\pdfs\OIT_Presentation.pdf" />
+    <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\holder.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.js" />
+    <Content Include="Scripts\jquery-1.10.2.min.map" />
+    <None Include="Scripts\jquery-1.9.1.intellisense.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\injectModal.js" />
+    <Content Include="Scripts\modernizr-2.6.2.js" />
+    <Content Include="Scripts\thumbnail.js" />
+    <Content Include="Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\_LayoutCarousel.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\_LayoutOIT.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\AboutController.cs" />
+    <Compile Include="Controllers\ApplicationsController.cs" />
+    <Compile Include="Controllers\BusinessController.cs" />
+    <Compile Include="Controllers\DataServicesController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\HostingController.cs" />
+    <Compile Include="Controllers\LinksController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Links.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\web.config" />
+    <Content Include="packages.config" />
+    <Content Include="Scripts\jquery-1.9.1.min.map" />
+    <Content Include="Views\About\Index.cshtml" />
+    <Content Include="Views\Applications\Index.cshtml" />
+    <Content Include="Views\Business\Index.cshtml" />
+    <Content Include="Views\DataServices\Index.cshtml" />
+    <Content Include="Views\Hosting\Index.cshtml" />
+    <Content Include="Views\Shared\_RequestModal.cshtml" />
+    <Content Include="Views\Shared\_CalendarModal.cshtml" />
+    <Content Include="Views\Shared\_ContactModal.cshtml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Views\Links\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>63577</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:63577/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,271 @@
+﻿
+@{
+    ViewBag.Title = "DataServices";
+    Layout = "~/Views/Shared/_LayoutOIT.cshtml";
+}
+<style>
+    .smooshed {
+        background: url("Content/images/MaroonBells.jpg")no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+<div id="divCats" class="container marketing">
+    <div class="sections">
+        <div><h1 id="PSheader" style="text-align:center; color:#5c666f;font-size:50px;">Data Products & Services</h1></div>
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+            <div class="col-sm-3">
+                <h2>Find Data</h2>
+                <p><a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Geographically referenced data. Examples include a shapefile of Colorado county boundaries, a KMZ of a broadband provider’s coverage area, or point features of address locations in a given area">Spatial </a> and <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Data which is not geographically referenced. Examples of this may include census block spreadsheet data, an Excel file detailing a list of contacts, or a graph breaking down percent allocations of a budget">Non-spatial </a> data standardized and packaged for use; <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="This refers to review and editing of data as it pertains to data quality such as typographical errors, attribute accuracy, and spatial accuracy, meaning the position of a polygon, for example, a county in Colorado being in the correct position">Cleansing </a> and analysis of data; associated data processing automation through scripts and models, and web services</p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-sm-3">
+                <h2>Use Web Services</h2>
+                <p>Available web services that can be consumed by GIS Software and applications. The service formats vary from mapservices, feature services, and <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="A GIS tool that applies the process of geocoding which involves converting addresses to latitude/longitude coordinates using address range data">geocoders</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-sm-3">
+                <h2>Data Standards</h2>
+                <p>COMING SOON. GCDP metadata standards for stewarded datasets; standards for data management; toolbox and packages to load enterprise datasets into <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Data templates which ensure a data set meets a specified standard in regards to column names, data types for each column, such as text or short integer, as well as which data are and are not included">standardized schemas</a></p>
+            </div><!-- /.col-lg-4 -->
+            <div class="col-sm-3">
+                <h2>Need Support?</h2>
+                <p>Support with data analysis through data processing; <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Many processes and tasks in GIS can involve an extensive amount of steps and time; automation is put simply, the use of computer programming to create tools which accomplish time and effort extensive GIS tasks for the user, as opposed to a GIS user carrying out every step manually">automation </a>through scripts and models; Evaluation, modification, and standardization of spatial and non-spatial data</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        <div class="row">
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://data.colorado.gov/" target="_blank"><b>Colorado Information Marketplace</b></a></li>
+                    <li class="list-group-item"><a href="#dataExplorer">COnfluence Data Explorer <img class="glyphicon-map" src="~/Content/images/glyphicons-503-map.png"></a></li>
+                    <li class="list-group-item"><a href="#recentDataFeat">Enterprise Datasets</a></li>
+                    <li class="list-group-item"><a href="https://geodata.co.gov/" target="_blank" class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Acronym for Light Detection and Ranging which is a remote sensing method which uses lasers to measure variable distances to the Earth">LiDAR Imagery</a></li>
+                    <li class="list-group-item"><a href="https://goo.gl/forms/EQTlbzD6P8EJ0lT93" target="_blank">Request LiDAR</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="https://gis.colorado.gov/public/rest/services" target="_blank">All Public Web Services</a></li>
+                    <li class="list-group-item"><a href="#recentDataFeat">Enterprise Dataset Services</a></li>
+                    <li class="list-group-item"><a href="https://gis.colorado.gov/gp/rest/services/Geocoders/PA_Composite/GeocodeServer" target="_blank">Use our Public Geocoder</a></li>
+                    <li class="list-group-item"><a href="#storyMapFeat">Story Maps and Viewers</a></li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item">Data Management</li>
+                    <li class="list-group-item">Toolbox and Packages</li>
+                    <li class="list-group-item">Metadata Catalog</li>
+                </ul>
+            </div>
+            <div class="col-md-3">
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSOne">Data Analysis</a></li> <!--#needSuppFeat--><!--collapseNSThree-->
+                    <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSTwo">Scripts & Automation</a></li>
+                    <li class="list-group-item"><a href="@Url.Action("Index", "Business")#dbFeaturette">Data Hosting</a></li>
+                    <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSThree">Need a Map?</a></li>
+                </ul>
+            </div>
+        </div>
+        <p style="float:left;margin:-10px;font-size:16px;"><a href="https://data.colorado.gov/" target="_blank"><b>How Can You Make Your Data Public?</b></a></p>
+
+    </div>
+    <!-- START THE FEATURETTES-->
+
+
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="recentDataFeat" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">See Our Enterprise Datasets. <span class="text-muted">Tell us what you think!</span></h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div href="#calendarModal" class="list-group-item oit-green-background">
+                            ENTERPRISE DATASETS
+                            <span class="loglyphs glyphicon glyphicon-calendar" aria-hidden="true" style="float:right; padding-right:5px;" title="Calendar"> </span>
+                            <span class="loglyphs glyphicon glyphicon-dashboard" aria-hidden="true" style="float:right;padding-right:5px;" title="Dashboard"> </span>
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                    Colorado Broadband
+                                </a>
+                                <a href="https://data.colorado.gov/browse?q=Colorado+broadband"><span class="hyglyphs glyphicon glyphicon-cloud-download" aria-hidden="true" style="float:right;padding-right:5px;" title="Download"></span></a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingOne">
+                            <div class="list-group">
+                                <p style="margin:10px;">The Broadband Mapping Team develops and maintains a database and an <a href="https://gis.colorado.gov/BroadbandViewer/?viewer=Map" target="_blank"><b>interactive online map</b></a> of broadband service in Colorado. The service data is collected directly from broadband carriers and verified using local input methods—such as speed tests and regional studies. <a href="http://broadband.co.gov/about/" target="_blank">Learn More...</a></p>
+                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband" class="list-group-item" target="_blank" data-id="recDataCol"><b>Broadband Coverage REST Services</b></a>
+                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/speedTest_Wireless/MapServer" class="list-group-item" target="_blank"><b>Speed Test Results for wireless broadband</b></a>
+                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/speedTest_Wireline/MapServer" class="list-group-item" target="_blank"><b>Speed Test Results for wireline broadband</b></a>
+                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/numProv_ALL/MapServer" class="list-group-item" target="_blank"><b>Number of Providers</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Community Anchor Institutions
+                                </a>
+                                <a href="https://data.colorado.gov/Telecommunications/Community-Anchor-Institutions-2016-Shapefile/jvug-2qau"><span class="hyglyphs glyphicon glyphicon-cloud-download" aria-hidden="true" style="float:right;padding-right:5px;" title="Download"></span></a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+                            <div class="list-group">
+                                <p style="margin:10px;">This layer represents the National Telecommunications Information Administration (NTIA) State Broadband Data Development Program (SBDD) Community Anchor Institutions (CAI) which subscribe to broadband. ''Community Anchor Institutions'' consist of schools, libraries, medical and healthcare providers, public safety entities, community colleges and other institutions of higher education, and other community support organizations and entities. These locations may not offer broadband availability to the public (although most libraries and many schools, and community centers do) but rather offer an opportunity for policy makers to understand where community anchor institutions who have broadband access are which can help in identifying challenges and opportunities to reaching national connectivity goals.  The primary source of information has been online address and location research, in combination with google maps and NAIP aerial imagery.</p>
+                                <a href="https://data.colorado.gov/Telecommunications/Community-Anchor-Institutions-2016-Shapefile/jvug-2qau" class="list-group-item" target="_blank"><b>Community Anchor Institution REST Service</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    Colorado Parcel Data
+                                </a>
+                                <a href="https://gisftp.colorado.gov/" target="_blank"><span class="hyglyphs glyphicon glyphicon-cloud-download" aria-hidden="true" style="float:right;padding-right:5px;" title="Download"></span></a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+                            <div class="list-group">
+                                <p style="margin:10px;">This dataset contains polygon features representing the approximate location of tax parcels contained in County Assessor tax rolls. Individual county data was integrated into this statewide publication by the Colorado GIS Coordination & Development Program. This dataset was derived from the compilation of numerous sources and digitizing methodologies. </p>
+                                <a href="https://gis.colorado.gov/Public/rest/services/Parcels/Public_Parcel_Map_Services/MapServer" class="list-group-item" target="_blank"><b>Colorado Parcels REST Service</b></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFour">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    Addresses and Geocoder
+                                </a>
+                                <a href="https://data.colorado.gov/Transportation/Colorado-Address-Layer-Public-/n7je-akky" target="_blank"><span class="hyglyphs glyphicon glyphicon-cloud-download" aria-hidden="true" style="float:right;padding-right:5px;" title="Download"></span></a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
+                            <div class="list-group">
+                                <a href="https://gis.colorado.gov/public/rest/services/Addresses" class="list-group-item" target="_blank"><b>Public Address REST Service</b></a>
+                                <a href="https://gis.colorado.gov/GP/rest/services/Addresses/PALocation_Composite/GeocodeServer" class="list-group-item" target="_blank"><b>OIT Public Geocoder</b></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <h1 class="featurette-heading" style="text-align:center; color:#FFFFFF;text-shadow: 5px 5px 10px black;">How We Can Assist State Agencies</h1>
+    <div class="sections">
+        <div id="dataAnalysisFeat" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Coming Soon. <b style="color:#777">Let us share our Toolbox.</b> </h3>
+                <div class="list-group">
+                    <div class="list-group-item oit-green-background">
+                        TOOLBOX & PACKAGES
+                    </div>
+                    <a class="list-group-item">Address Tools and Packages</a>
+                    <a class="list-group-item">Parcel Tools and Packages</a>
+                    <a class="list-group-item">Schema Conforming Tools for Enterprise Datasets</a>
+                    <a class="list-group-item">Publishing Tools and Resources</a>
+                </div>
+            </div>
+        </div>
+        <br />
+        <div id="storyMapFeat" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Want to tell a <b style="color:#d1b400">compelling story</b>?</h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            STORY MAPS & VIEWERS
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingSMOne">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSMOne" aria-expanded="true" aria-controls="collapseSMOne">
+                                    Story Maps
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSMOne" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingSMOne">
+                            <div class="list-group">
+                                <p style="margin:10px;">What is a Story Map? It's a web application that consists of authoritative maps, texts, and multimedia content that attempts to tell a story. Want to see an <a href="http://maps.co.gov/cofloodrecovery/">example</a>? Our team collaborated with the Colorado Resilience and Recovery Office to create a graphical journey following three years of recovery from the devastating 2013 Colorado floods.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingSMTwo">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseSMTwo" aria-expanded="true" aria-controls="collapseSMTwo">
+                                    Viewers
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseSMTwo" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingSMTwo">
+                            <div class="list-group">
+                                <p style="margin:10px;">A Map Viewer is an interactive web application that consumes authoritative maps and layers that have been published as REST services. Learn more about web applications on our <a href="indexApp.html">Application Services</a> page</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br />
+    <div class="sections">
+        <div id="needSuppFeat" class="row featurette">
+            <div>
+                <h3 class="featurette-heading">Support. <b style="color:#d1b400">Assess.</b> Integrate. </h3>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            DATA SUPPORT
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingNSOne">
+
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNSOne" aria-expanded="true" aria-controls="collapseNSOne">
+                                    Data Analysis
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseNSOne" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingNSOne">
+                            <div class="list-group">
+                                <p style="margin:10px;">Having trouble trying to analyze data due to technology or personnel limitations? We are more than happy to assist. We have assisted a number of state agencies and staff with data analysis; including the Secretary of State.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNSTwo">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNSTwo" aria-expanded="false" aria-controls="collapseNSTwo">
+                                    Scripts and Automation
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseNSTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNSTwo">
+                            <div class="list-group">
+                                <p style="margin:10px;">Do you need a script or automated process for loading your enterprise data into our GCDP Enterprise Dataset template? Our team has writtern and packaged scripts to ease the process of providing enterprise data to our bi-annual data calls. All you have to do is ask!</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingNSThree">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseNSThree" aria-expanded="false" aria-controls="collapseNSThree">
+                                    Need a Map?
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseNSThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingNSThree">
+                            <div class="list-group">
+                                <p style="margin:10px;">Vector and raster data overlays with customized symbology and additional standard cartographic components (i.e. Scanned and Digital Topographics, LiDAR, and base maps)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>

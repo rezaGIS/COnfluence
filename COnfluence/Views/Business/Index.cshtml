@@ -1,0 +1,164 @@
+﻿
+@{
+    ViewBag.Title = "Business";
+    Layout = "~/Views/Shared/_LayoutOIT.cshtml";
+}
+<style>
+    .smooshed {
+        background: url("Content/images/squirrel.jpg")no-repeat center center fixed;
+        background-size: cover;
+    }
+</style>
+<div id="divCats" class="container marketing">
+    <div class="sections">
+        <div><h1 id="PSheader" style="text-align:center; color:#5c666f;font-size:50px;">Business Support Services</h1></div>
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Consulting</h2>
+                <p> Assess technological needs, product solutions, provide  training and guidance in best practices</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#consultFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseOneCon">Technology Assessment & GIS Product Solution</a></li>
+                    <li class="list-group-item"><a href="#consultFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseTwoCon">GIS Software Training</a></li>
+                    <li class="list-group-item"><a href="#consultFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseThreeCon">Best Practices</a></li>
+                </ul>
+            </div>
+            <div class="col-md-6">
+                <h2>GIS Project Management</h2>
+                <p>Assist in procurement, prototyping, licensing, and tool generation</p>
+                <ul class="list-group">
+                    <li class="list-group-item"><a href="#PMFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseOnePM">Rapid Prototyping</a></li>
+                    <li class="list-group-item"><a href="#PMFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseTwoPM">Project Requirements & Scope of Work Definition</a></li>
+                    <li class="list-group-item"><a href="#PMFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseFourPM">Software and Product licensing</a></li>
+                    <li class="list-group-item"><a href="#PMFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseFivePM">Contractor Procurement</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="consultFeat" class="row featurette">
+            <div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            GIS Business Consulting
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingOneCon">
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOneCon" aria-expanded="true" aria-controls="collapseOneCon">
+                                    Technology Assessment & GIS Product Solution
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOneCon" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingOneCon">
+                            <div class="list-group">
+                                <p style="margin:10px;">We will Assess and test GIS technology solutions for field collection, database construction and maintenance, data storage, and consumption of web services. Our goal is to help you find a GIS technology solution that meets your needs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwoCon">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwoCon" aria-expanded="false" aria-controls="collapseTwoCon">
+                                    GIS Product Training
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwoCon" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwoCon">
+                            <div class="list-group">
+                                <p style="margin:10px;">COMONG SOON. Provide training to State Agencies and stakeholders in GIS technologies and software. Where applicable, provide training in the field for data collection. When necessary, provide hands on or classroom style training on the fundamentals of GIS software implementation.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingThreeCon">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThreeCon" aria-expanded="false" aria-controls="collapseThreeCon">
+                                    Best Practices
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseThreeCon" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThreeCon">
+                            <div class="list-group">
+                                <p style="margin:10px;">COMING SOON. Documentation or mentoring on best practices where GIS technology, software, and security are implemented.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <hr class="featurette-divider">
+    <div class="sections">
+        <div id="PMFeat" class="row featurette">
+            <div>
+                <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+                    <div class="panel panel-default">
+                        <div class="list-group-item oit-green-background">
+                            GIS Project Management
+                        </div>
+                        <div class="panel-heading" role="tab" id="headingOnePM">
+
+                            <h4 class="panel-title">
+                                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOnePM" aria-expanded="true" aria-controls="collapseOnePM">
+                                    Rapid Prototyping
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseOnePM" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingOnePM">
+                            <div class="list-group">
+                                <p style="margin:10px;">Test your ideas. Assess level of effort and feasibility of applying GIS solutions. Explore the benefit of leveraging GIS to enhance your project.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingTwoPM">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwoPM" aria-expanded="false" aria-controls="collapseTwoPM">
+                                    Project Requirements & Scope of Work Definition
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwoPM" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwoPM">
+                            <div class="list-group">
+                                <p style="margin:10px;">Contractors</p>
+                                <p style="margin:10px;">RFPs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFourPM">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFourPM" aria-expanded="false" aria-controls="collapseFourPM">
+                                    Software and Product Licensing
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFourPM" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFourPM">
+                            <div class="list-group">
+                                <p style="margin:10px;">Need help procuring a GIS software or GIS product license? We can help. </p>
+                                <p style="margin:10px;">Need help having a license hosted on a Server? We can help. We currently host ArcGIS Licenses for a number of Agencies. </p>
+                                <p style="margin:10px;">Do you need support hosting ArcGIS solutions in conjunction with 3rd party vendor software? We currently support agencies that utilize GIS solutions through multiple vendors.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="panel panel-default">
+                        <div class="panel-heading" role="tab" id="headingFivePM">
+                            <h4 class="panel-title">
+                                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseFivePM" aria-expanded="false" aria-controls="collapseFivePM">
+                                    Contractor Procurement
+                                </a>
+                            </h4>
+                        </div>
+                        <div id="collapseFivePM" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFivePM">
+                            <div class="list-group">
+                                <p style="margin:10px;">We have assisted in the negotiation of contracts with outside vendors for some of our state agencies. Have questions? Just ask.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

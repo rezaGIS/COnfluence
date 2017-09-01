@@ -1,0 +1,116 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/confluence.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.6.2/modernizr.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
+    <script src="~/Scripts/thumbnail.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("a.my-tool-tip").tooltip();
+        });
+        $(function () {
+            $('.privacyTerms').popover({
+                placement: 'top'
+            });
+            $('.tip').popover({
+                placement: 'top',
+                container: 'body'
+            });
+        });       
+    </script>
+</head>
+<body class="smooshed">
+    <div class="navbar-wrapper ">
+        <div id="topLogo" class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="@Url.Action("Index", "Home")">
+                    <img src="~/Content/images/co_oit_gis_cmyk.png" class="img-responsive" id="oitLogoBrand" style="width:100%;" />
+                </a>
+                <div id="mobileTitlePic">
+                    <div id="mobileTitleTxt"> <img class="img-responsive" src="~/Content/images/bannerLogo.png" /></div>
+                </div>
+                <div id="titlePic" class="text-fluid">
+                    <img class="img-responsive" src="~/Content/images/bannerLogo.png" />
+                </div>
+            </div>
+        </div>
+        <nav id="navbarInverse" class="navbar navbar-inverse navbar-static-top ">
+            <div class="container navbar-container-oit">
+                <div class="container drpdwn-container-oit">
+                    <!--Dropdown menu left side navbar-->
+                    <a class="dropdown-toggle" id="dropdownMenu" data-toggle="dropdown" aria-haspopup="true" aria-hidden="true"><div class="glyphicon-oit-text"><span class="grid glyphicon glyphicon-th-large glyphicon-oit"> Menu</span></div></a>                 
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Home")"><span class="glyphicon glyphicon-home glyphicon-oit"></span> Home</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "DataServices")"><span class="glyphicon glyphicon-tasks glyphicon-oit"></span> Data</a></li>
+                        <li><a class="dropdown-item" href=@Url.Action("Index", "Applications")><span class="glyphicon glyphicon-list-alt glyphicon-oit"></span> Application</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Hosting")"><span class="glyphicon glyphicon-cloud-upload glyphicon-oit"></span> Hosting</a></li>
+                        <li><a class="dropdown-item" href="@Url.Action("Index", "Business")"><span class="glyphicon glyphicon-hand-right glyphicon-oit"></span> Business</a></li>
+                    </ul>
+                </div>
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarCollapse" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar icon-bar-oit-green"></span>
+                        <span class="icon-bar icon-bar-oit-green"></span>
+                        <span class="icon-bar icon-bar-oit-green"></span>
+                    </button>
+                <div class="container action-container-oit">
+                    <!--Desktop right side navbar-->
+                    <div id="navbar" class="navbar-collapse collapse navbar-right">
+                        <ul class="home nav navbar-nav navbar-right">
+                            <li><a class="my-tool-tip" href="@Url.Action("Index", "About")" title="About Us" data-toggle="tooltip" data-placement="auto bottom"><span class="glyphicon glyphicon-user glyphicon-oit"></span></a></li>
+                            <li><a class="my-tool-tip" href="#contactModal" title="Contact Us" data-toggle="modal" data-target="#contactModal" data-placement="auto bottom"><span class="glyphicon glyphicon-envelope glyphicon-oit" aria-hidden="true"></span></a></li>
+                            <li><a class="my-tool-tip" href="#calendarModal" title="Team Calendar" data-toggle="modal" data-target="#calendarModal" data-placement="auto bottom"><span class="glyphicon glyphicon-calendar glyphicon-oit" aria-hidden="true"></span></a></li>
+                            <li><a class="my-tool-tip" href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom"><span class="glyphicon glyphicon-comment glyphicon-oit" aria-hidden="true"></span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!--Mobile right side navbar-->
+                <div id="navbarCollapse" class="navbar-collapse collapse navbar-right switch-list-collapse">
+                    <ul class="home nav navbar-nav navbar-right switch-list-collapse">
+                        <li><a class="collapse-text" href="@Url.Action("Index", "About")" title="About Us" data-toggle="tooltip" data-placement="auto bottom"><span class="glyphicon glyphicon-user"></span> About-us</a></li>                       
+                        <li><a class="collapse-text" href="#contactModal" title="Contact Us" data-toggle="modal" data-target="#contactModal" data-placement="auto bottom"><span class="glyphicon glyphicon-envelope"></span> Contact</a></li>
+                        <li><a class="collapse-text" href="#calendarModal" title="Team Calendar" data-toggle="modal" data-target="#calendarModal" data-placement="auto bottom"><span class="glyphicon glyphicon-calendar"></span> Calendar</a></li>
+                        <li><a class="collapse-text" href="#requestModal" title="Request Service" data-toggle="modal" data-target="#requestModal" data-placement="auto bottom"><span class="glyphicon glyphicon-comment"></span> Request Service</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div class="modal fade" id="requestModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                @Html.Partial("_RequestModal")
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="calendarModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                @Html.Partial("_CalendarModal")
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="contactModal" tabindex="-1" role="dialog" aria-labelledby="requestLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                @Html.Partial("_ContactModal")
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>Governor's Office of Information Technology | 601 E. 18th Ave., Suite 250, Denver, CO 80203 | 303.764.7700 | oit@state.co.us</p>
+            <p>&copy; @DateTime.Now.Year - GCDP</p>
+        </footer>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+﻿<div class="modal-header modal-oit-text">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+    <h4 class="modal-title" id="requestLabel">Submit Request to OIT</h4>
+</div>
+<div class="modal-body">
+    <form class="form-horizontal">
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="nameRequest">Name</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="nameRequest" placeholder="Full name" name="requestName">
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="orgRequest">Agency</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="orgRequest" placeholder="Agency name" name="requestAgency">
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="emailRequest">E-mail</label>
+            <div class="col-sm-10">
+                <input class="form-control" type="text" id="emailRequest" placeholder="Enter your email" name="requestEmail">
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">Services</label>
+            <div class="col-sm-10">
+                <select id="selectService" class="form-control input-lg" name="requestService">
+                    <option value="Data Services">Data Services</option>
+                    <option value="Business Support">Business Support</option>
+                    <option value="Application Services">Application Services</option>
+                    <option value="Hosting Services">Hosting Services</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group form-group-lg">
+            <label class="col-sm-2 control-label" for="formGroupInputLarge">Description</label>
+            <div class="col-sm-10">
+                <textarea class="form-control" rows="3" placeholder="Describe request" name="requestDesc"></textarea>
+            </div>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+    <button type="button" class="btn btn-primary" id="submitRequest">Submit Request</button>
+</div>
