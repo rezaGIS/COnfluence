@@ -1,38 +1,21 @@
-﻿
-@{
+﻿@{
     ViewBag.Title = "DataServices";
     Layout = "~/Views/Shared/_LayoutOIT.cshtml";
 }
 <style>
     .smooshed {
-        background: url("Content/images/MaroonBells.jpg")no-repeat center center fixed;
+        background: url("/COnfluence/Content/images/MaroonBells.jpg")no-repeat center center fixed;
         background-size: cover;
     }
 </style>
-<div id="divCats" class="container marketing">
+<div id="dataServicesCats" class="marketing">
     <div class="sections">
         <div><h1 id="PSheader" style="text-align:center; color:#5c666f;font-size:50px;">Data Products & Services</h1></div>
         <!-- Three columns of text below the carousel -->
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-lg-3">
                 <h2>Find Data</h2>
                 <p><a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Geographically referenced data. Examples include a shapefile of Colorado county boundaries, a KMZ of a broadband provider’s coverage area, or point features of address locations in a given area">Spatial </a> and <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Data which is not geographically referenced. Examples of this may include census block spreadsheet data, an Excel file detailing a list of contacts, or a graph breaking down percent allocations of a budget">Non-spatial </a> data standardized and packaged for use; <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="This refers to review and editing of data as it pertains to data quality such as typographical errors, attribute accuracy, and spatial accuracy, meaning the position of a polygon, for example, a county in Colorado being in the correct position">Cleansing </a> and analysis of data; associated data processing automation through scripts and models, and web services</p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-sm-3">
-                <h2>Use Web Services</h2>
-                <p>Available web services that can be consumed by GIS Software and applications. The service formats vary from mapservices, feature services, and <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="A GIS tool that applies the process of geocoding which involves converting addresses to latitude/longitude coordinates using address range data">geocoders</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-sm-3">
-                <h2>Data Standards</h2>
-                <p>COMING SOON. GCDP metadata standards for stewarded datasets; standards for data management; toolbox and packages to load enterprise datasets into <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Data templates which ensure a data set meets a specified standard in regards to column names, data types for each column, such as text or short integer, as well as which data are and are not included">standardized schemas</a></p>
-            </div><!-- /.col-lg-4 -->
-            <div class="col-sm-3">
-                <h2>Need Support?</h2>
-                <p>Support with data analysis through data processing; <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Many processes and tasks in GIS can involve an extensive amount of steps and time; automation is put simply, the use of computer programming to create tools which accomplish time and effort extensive GIS tasks for the user, as opposed to a GIS user carrying out every step manually">automation </a>through scripts and models; Evaluation, modification, and standardization of spatial and non-spatial data</p>
-            </div><!-- /.col-lg-4 -->
-        </div><!-- /.row -->
-        <div class="row">
-            <div class="col-md-3">
                 <ul class="list-group">
                     <li class="list-group-item"><a href="https://data.colorado.gov/" target="_blank"><b>Colorado Information Marketplace</b></a></li>
                     <li class="list-group-item"><a href="#dataExplorer">COnfluence Data Explorer <img class="glyphicon-map" src="~/Content/images/glyphicons-503-map.png"></a></li>
@@ -40,37 +23,42 @@
                     <li class="list-group-item"><a href="https://geodata.co.gov/" target="_blank" class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Acronym for Light Detection and Ranging which is a remote sensing method which uses lasers to measure variable distances to the Earth">LiDAR Imagery</a></li>
                     <li class="list-group-item"><a href="https://goo.gl/forms/EQTlbzD6P8EJ0lT93" target="_blank">Request LiDAR</a></li>
                 </ul>
-            </div>
-            <div class="col-md-3">
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <h2>Web Services</h2>
+                <p>Available web services that can be consumed by GIS Software and applications. The service formats vary from mapservices, feature services, and <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="A GIS tool that applies the process of geocoding which involves converting addresses to latitude/longitude coordinates using address range data">geocoders</a></p>
                 <ul class="list-group">
                     <li class="list-group-item"><a href="https://gis.colorado.gov/public/rest/services" target="_blank">All Public Web Services</a></li>
                     <li class="list-group-item"><a href="#recentDataFeat">Enterprise Dataset Services</a></li>
                     <li class="list-group-item"><a href="https://gis.colorado.gov/gp/rest/services/Geocoders/PA_Composite/GeocodeServer" target="_blank">Use our Public Geocoder</a></li>
                     <li class="list-group-item"><a href="#storyMapFeat">Story Maps and Viewers</a></li>
                 </ul>
-            </div>
-            <div class="col-md-3">
+             </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <h2>Data Standards</h2>
+                <p>COMING SOON. GCDP metadata standards for stewarded datasets; standards for data management; toolbox and packages to load enterprise datasets into <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Data templates which ensure a data set meets a specified standard in regards to column names, data types for each column, such as text or short integer, as well as which data are and are not included">standardized schemas</a></p>
                 <ul class="list-group">
                     <li class="list-group-item">Data Management</li>
                     <li class="list-group-item">Toolbox and Packages</li>
                     <li class="list-group-item">Metadata Catalog</li>
                 </ul>
-            </div>
-            <div class="col-md-3">
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-3">
+                <h2>Need Support?</h2>
+                <p>Support with data analysis through data processing; <a class="tip" data-trigger="hover" data-toggle="popover" title="Helpful Tip" data-content="Many processes and tasks in GIS can involve an extensive amount of steps and time; automation is put simply, the use of computer programming to create tools which accomplish time and effort extensive GIS tasks for the user, as opposed to a GIS user carrying out every step manually">automation </a>through scripts and models; Evaluation, modification, and standardization of spatial and non-spatial data</p>
                 <ul class="list-group">
                     <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSOne">Data Analysis</a></li> <!--#needSuppFeat--><!--collapseNSThree-->
                     <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSTwo">Scripts & Automation</a></li>
                     <li class="list-group-item"><a href="@Url.Action("Index", "Business")#dbFeaturette">Data Hosting</a></li>
                     <li class="list-group-item"><a href="#needSuppFeat" data-toggle="collapse" aria-expanded="true" data-target="#collapseNSThree">Need a Map?</a></li>
                 </ul>
-            </div>
-        </div>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+        
         <p style="float:left;margin:-10px;font-size:16px;"><a href="https://data.colorado.gov/" target="_blank"><b>How Can You Make Your Data Public?</b></a></p>
 
     </div>
     <!-- START THE FEATURETTES-->
-
-
     <hr class="featurette-divider">
     <div class="sections">
         <div id="recentDataFeat" class="row featurette">
@@ -95,9 +83,7 @@
                             <div class="list-group">
                                 <p style="margin:10px;">The Broadband Mapping Team develops and maintains a database and an <a href="https://gis.colorado.gov/BroadbandViewer/?viewer=Map" target="_blank"><b>interactive online map</b></a> of broadband service in Colorado. The service data is collected directly from broadband carriers and verified using local input methods—such as speed tests and regional studies. <a href="http://broadband.co.gov/about/" target="_blank">Learn More...</a></p>
                                 <a href="https://gis.colorado.gov/Public/rest/services/Broadband" class="list-group-item" target="_blank" data-id="recDataCol"><b>Broadband Coverage REST Services</b></a>
-                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/speedTest_Wireless/MapServer" class="list-group-item" target="_blank"><b>Speed Test Results for wireless broadband</b></a>
-                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/speedTest_Wireline/MapServer" class="list-group-item" target="_blank"><b>Speed Test Results for wireline broadband</b></a>
-                                <a href="https://gis.colorado.gov/Public/rest/services/Broadband/numProv_ALL/MapServer" class="list-group-item" target="_blank"><b>Number of Providers</b></a>
+                                <a href="https://gis.colorado.gov/public/rest/services/Broadband/BroadbandCoverage/MapServer" class="list-group-item" target="_blank"><b>Consume broadband services into your workflow</b></a>
                             </div>
                         </div>
                     </div>
@@ -145,7 +131,7 @@
                         <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingFour">
                             <div class="list-group">
                                 <a href="https://gis.colorado.gov/public/rest/services/Addresses" class="list-group-item" target="_blank"><b>Public Address REST Service</b></a>
-                                <a href="https://gis.colorado.gov/GP/rest/services/Addresses/PALocation_Composite/GeocodeServer" class="list-group-item" target="_blank"><b>OIT Public Geocoder</b></a>
+                                <a href="https://gis.colorado.gov/gp/rest/services/Geocoders/PA_SingleHouse/GeocodeServer" class="list-group-item" target="_blank"><b>OIT Public Geocoder</b></a>
                             </div>
                         </div>
                     </div>
@@ -188,7 +174,7 @@
                         </div>
                         <div id="collapseSMOne" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingSMOne">
                             <div class="list-group">
-                                <p style="margin:10px;">What is a Story Map? It's a web application that consists of authoritative maps, texts, and multimedia content that attempts to tell a story. Want to see an <a href="http://maps.co.gov/cofloodrecovery/">example</a>? Our team collaborated with the Colorado Resilience and Recovery Office to create a graphical journey following three years of recovery from the devastating 2013 Colorado floods.</p>
+                                <p style="margin:10px;">What is a Story Map? It's a web application that consists of authoritative maps, texts, and multimedia content that attempts to tell a story. Want to see an <a href="https://gis.colorado.gov/cofloodrecovery/">example</a>? Our team collaborated with the Colorado Resilience and Recovery Office to create a graphical journey following three years of recovery from the devastating 2013 Colorado floods.</p>
                             </div>
                         </div>
                     </div>
@@ -202,7 +188,7 @@
                         </div>
                         <div id="collapseSMTwo" class="accordion-body collapse" role="tabpanel" aria-labelledby="headingSMTwo">
                             <div class="list-group">
-                                <p style="margin:10px;">A Map Viewer is an interactive web application that consumes authoritative maps and layers that have been published as REST services. Learn more about web applications on our <a href="indexApp.html">Application Services</a> page</p>
+                                <p style="margin:10px;">A Map Viewer is an interactive web application that consumes authoritative maps and layers that have been published as REST services. Learn more about web applications on our <a href="Applications">Application Services</a> page</p>
                             </div>
                         </div>
                     </div>
@@ -267,5 +253,4 @@
             </div>
         </div>
     </div>
-
 </div>
